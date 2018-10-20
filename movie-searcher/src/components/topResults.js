@@ -5,11 +5,12 @@ class TopResults extends Component {
   constructor() {
     super();
     this.state = {
-      searches: []
+      searches: [],
+      load: true
     };
   }
 
-  componentDidMount() {
+  getData = () => {
     return axios
       .get("/api/searches/")
       .then(response => {
@@ -19,10 +20,17 @@ class TopResults extends Component {
         this.state.searches.push(response.data[2]._id);
         this.state.searches.push(response.data[3]._id);
         this.state.searches.push(response.data[4]._id);
+        this.setState({
+          load: false
+        });
       })
       .catch(error => {
         console.log("Error with fetching data", error);
       });
+  };
+
+  componentDidMount() {
+    this.getData();
   }
 
   render() {
