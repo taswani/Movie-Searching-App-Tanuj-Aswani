@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const jsonParser = require("body-parser").json;
 const mongoose = require("mongoose");
 const searches = require("./searches");
+const path = require("path");
 const app = express();
 
 //Mongoose connections
@@ -43,6 +44,7 @@ app.set("port", process.env.PORT || 5000);
 // morgan gives us http request logging
 app.use(morgan("dev"));
 app.use(jsonParser());
+app.use(express.static(path.join(__dirname, "/movie-searcher/build")));
 
 // add additional routes here
 app.use("/api/searches", searches);
@@ -52,6 +54,10 @@ app.get("/", (req, res) => {
   res.json({
     message: "Welcome to the Search Results API"
   });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/movie-searcher/build/index.html"));
 });
 
 // uncomment this route in order to test the global error handler
