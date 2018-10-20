@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=K2D");
+
+body {
+  text-align: center;
+  background-color: #282c34;
+  font-family: "K2D", sans-serif;
+  color: black;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+}
+
+a {
+  color: #f1d8d8;
+}
+
+img {
+  border-radius: 3px;
+  box-shadow: 10px 10px gray;
+}
+
+iframe {
+  box-shadow: 10px 10px gray;
+  border: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.search-results {
+  list-style: none;
+}
+
+.top-results li {
+  list-style: none;
+}
+
+.main {
+  min-width: 1000px;
+  min-height: 700px;
+}
+
+.main-second {
+  min-width: 300px;
+  max-width: 400px;
+  max-height: 1100px;
+}
+
+.table {
+  text-transform: capitalize;
+}
+
+.display-4 {
+  color: white;
+}
+
+.table {
+  position: relative;
+  top: 50px;
+  max-width: 300px;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+}
