@@ -9,10 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client-install": "cd movie-searcher && npm install",
-    "start": "node server.js",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server.js",
     "client": "npm start --prefix movie-searcher",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd movie-searcher && npm install && npm run build"
   },
   "author": "Tanuj Aswani",
