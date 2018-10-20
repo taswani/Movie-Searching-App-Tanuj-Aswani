@@ -59,6 +59,3 @@ typings/
 
 # next.js build output
 .next
-
-/uri.js
-/movie-searcher/src/config.js
