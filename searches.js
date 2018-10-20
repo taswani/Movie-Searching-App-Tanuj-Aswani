@@ -21,7 +21,7 @@ router.get("/", function(req, res, next) {
   });
 });
 
-//Post route to create add a search.
+//Post route to create a search.
 router.post("/", function(req, res, next) {
   Search.create(req.body, function(err, search) {
     if (err) return next(err);

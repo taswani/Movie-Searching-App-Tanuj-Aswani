@@ -14,7 +14,6 @@ class TopResults extends Component {
     return axios
       .get("/api/searches/")
       .then(response => {
-        console.log(response);
         this.state.searches.push(response.data[0]._id);
         this.state.searches.push(response.data[1]._id);
         this.state.searches.push(response.data[2]._id);
