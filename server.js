@@ -11,7 +11,7 @@ const app = express();
 
 //Mongoose connections
 mongoose.connect(
-  process.env.MONGOLAB_URI || "mongodb://localhost:27017/searches"
+  "mongodb://taswani:lightw8d@ds221242.mlab.com:21242/heroku_j0qc4qf3"
 );
 const db = mongoose.connection;
 
