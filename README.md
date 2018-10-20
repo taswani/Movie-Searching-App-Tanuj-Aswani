@@ -36,3 +36,5 @@ mongod
 ```
 npm start
 ```
+
+The database will start off with no data in it, so the Top Searches section of the app will remain unpopulated till after a few searches have been made.
