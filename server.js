@@ -7,13 +7,11 @@ const jsonParser = require("body-parser").json;
 const mongoose = require("mongoose");
 const searches = require("./searches");
 const path = require("path");
+const { URI } = require("./uri");
 const app = express();
 
 //Mongoose connections
-mongoose.connect(
-  "mongodb://heroku_dx8403bb:n130c9q4kfp4nn9bcd02qccr9a@ds137483.mlab.com:37483/heroku_dx8403bb" ||
-    "mongodb://localhost/searches"
-);
+mongoose.connect(URI || "mongodb://localhost/searches");
 const db = mongoose.connection;
 
 //DB shows error if there is a connection error.
