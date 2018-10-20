@@ -9,7 +9,9 @@ const searches = require("./searches");
 const app = express();
 
 //Mongoose connections
-mongoose.connect("mongodb://localhost:27017/searches");
+mongoose.connect(
+  process.env.MONGOLAB_URI || "mongodb://localhost:27017/searches"
+);
 const db = mongoose.connection;
 
 //DB shows error if there is a connection error.
