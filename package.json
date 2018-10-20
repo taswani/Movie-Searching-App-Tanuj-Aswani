@@ -9,7 +9,8 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix movie-searcher",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd movie-searcher && npm install && npm run build"
   },
   "author": "Tanuj Aswani",
   "license": "MIT",

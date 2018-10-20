@@ -2,7 +2,7 @@ import React from "react"; //Importing react and component for the app.
 
 const SearchFoundAndLoaded = props => {
   return (
-    <div className="container row">
+    <div className="container-fluid row">
       <div className="col-md">
         <ul className="search-results my-4">
           <li className="mx-auto my-3">
