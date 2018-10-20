@@ -10,7 +10,10 @@ const path = require("path");
 const app = express();
 
 //Mongoose connections
-mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/searches");
+mongoose.connect(
+  "mongodb://heroku_dx8403bb:n130c9q4kfp4nn9bcd02qccr9a@ds137483.mlab.com:37483/heroku_dx8403bb" ||
+    "mongodb://localhost/searches"
+);
 const db = mongoose.connection;
 
 //DB shows error if there is a connection error.
