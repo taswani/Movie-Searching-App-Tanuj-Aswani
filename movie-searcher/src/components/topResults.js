@@ -11,7 +11,7 @@ class TopResults extends Component {
 
   componentDidMount() {
     return axios
-      .get("http://localhost:5000/api/searches/")
+      .get("/api/searches/")
       .then(response => {
         console.log(response);
         this.state.searches.push(response.data[0]._id);

@@ -21,7 +21,7 @@ class SearchBar extends Component {
     e.preventDefault();
     this.props.search(this.state.search);
     e.currentTarget.reset();
-    return axios.post("http://localhost:5000/api/searches", {
+    return axios.post("/api/searches", {
       text: this.state.query
     });
   };
