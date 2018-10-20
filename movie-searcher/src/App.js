@@ -36,7 +36,7 @@ class App extends Component {
       response: "false"
     });
     return axios
-      .get(`http://www.omdbapi.com/?apikey=${apiKey}&t=${query}&type=movie`)
+      .get(`https://www.omdbapi.com/?apikey=${apiKey}&t=${query}&type=movie`)
       .then(response => {
         let posterT = response.data.Title;
         let posterY = response.data.Year;
