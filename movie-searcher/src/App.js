@@ -30,6 +30,7 @@ class App extends Component {
     };
   }
 
+  //main search component that combines both the api calls necessary for the app to work.
   searchOMDB = query => {
     this.setState({
       loading: true,

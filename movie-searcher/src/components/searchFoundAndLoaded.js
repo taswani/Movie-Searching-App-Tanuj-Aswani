@@ -1,5 +1,6 @@
 import React from "react"; //Importing react and component for the app.
 
+//component that displays succesful search results.
 const SearchFoundAndLoaded = props => {
   return (
     <div className="container-fluid row">

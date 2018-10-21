@@ -2,6 +2,7 @@ import React from "react"; //Importing react and component for the app.
 import SearchFoundAndLoaded from "./searchFoundAndLoaded";
 import SearchResultsNotFound from "./searchResultsNotFound";
 
+//Last step to check for loading versus non-existence
 const SearchResultsFound = props => {
   let load;
   if (props.response === "false") {

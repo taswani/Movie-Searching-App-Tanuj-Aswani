@@ -1,6 +1,7 @@
 import React, { Component } from "react"; //Importing react and component for the app.
 import axios from "axios";
 
+//component that gets data from the data base and populates the top search results section.
 class TopResults extends Component {
   constructor() {
     super();

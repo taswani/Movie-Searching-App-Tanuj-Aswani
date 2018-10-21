@@ -1,12 +1,14 @@
 import React from "react"; //Importing react and component for the app.
 
 //simple not found component.
-const SearchResultsNotFound = props => {
+const PageNotFound = props => {
   return (
     <div className="container-fluid">
-      <p>No movies matched the search. Try searching again!</p>
+      <p style={{ color: "white", marginTop: "100px" }}>
+        This page does not exist!
+      </p>
     </div>
   );
 };
 
-export default SearchResultsNotFound;
+export default PageNotFound;

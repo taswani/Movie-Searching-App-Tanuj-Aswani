@@ -1,6 +1,7 @@
 import React, { Component } from "react"; //Importing react and component for the app.
 import SearchResults from "./searchResults";
 
+//Component that pushes props down to search results.
 class SearchArea extends Component {
   render() {
     return (
