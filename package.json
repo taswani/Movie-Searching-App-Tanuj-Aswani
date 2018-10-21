@@ -8,8 +8,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client-install": "cd movie-searcher && npm install",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "preinstall": "cd movie-searcher && npm install",
+    "start": "concurrently \"npm run server\" \"mongod\" \"npm run client\"",
     "server": "nodemon server.js",
     "client": "npm start --prefix movie-searcher",
     "heroku-postbuild": "cd movie-searcher && npm install && npm run build"
@@ -20,6 +20,7 @@
     "body-parser": "^1.18.3",
     "concurrently": "^4.0.1",
     "express": "^4.16.4",
+    "mongodb": "^3.1.8",
     "mongoose": "^5.3.4",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.4",
