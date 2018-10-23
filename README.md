@@ -14,10 +14,6 @@ Once those are installed do the following:
 npm install
 ```
 
-```
-npm run client-install
-```
-
 Then you will need to acquire a YouTube Data API key, along with a OMDB Api key. Once those are acquired, put them in a file named config.js and put that file in the src folder in movie-searcher. The `apiKey` variable will hold the OMDB key and the `yApiKey` will hold the youtube key.
 
 For example:
@@ -27,11 +23,7 @@ export const apiKey = "your api key here",
   yApiKey = "your api key here";
 ```
 
-Then in two separate terminals,
-
-```
-mongod
-```
+Then,
 
 ```
 npm start
