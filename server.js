@@ -7,11 +7,12 @@ const jsonParser = require("body-parser").json;
 const mongoose = require("mongoose");
 const searches = require("./searches");
 const path = require("path");
-const { URI } = require("./uri");
+//const { URI } = require("./uri");
+//commenting out for the sake of respository, but the uri is used in production.
 const app = express();
 
 //Mongoose connections
-mongoose.connect(URI || "mongodb://localhost/searches");
+mongoose.connect("mongodb://localhost/searches");
 const db = mongoose.connection;
 
 //DB shows error if there is a connection error.
